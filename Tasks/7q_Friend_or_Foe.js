@@ -11,5 +11,17 @@
 // friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 // Note: keep the original order of the names in the output.
 
-let friend = (friends) =>
-  friends.filter((item) => item[0].toUpperCase() && item.length == 4);
+function friend(friends) {
+  return friends.filter((item) => isNaN(item) && item.length == 4);
+}
+
+console.log(
+  friend([
+    "Jimm",
+    "Cari",
+    "aret",
+    "truehdnviegkwgvke",
+    "sixtyiscooooool",
+    "1234",
+  ])
+);
