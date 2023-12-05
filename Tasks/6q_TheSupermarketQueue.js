@@ -25,6 +25,14 @@
 // // should return 12
 
 function queueTime(customers, n) {
-  for (let i = 0; i <= n; i++) {}
+  if (customers.length === 0) return 0;
+
+  let time = new Array(n).fill(0);
+  customers.forEach((customer) => {
+    let nextCashier = time.indexOf(Math.min(...time));
+    time[nextCashier] += customer;
+  });
+
+  return Math.max(...time);
 }
 console.log(queueTime([10, 2, 3, 3], 2));
