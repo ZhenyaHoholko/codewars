@@ -29,8 +29,8 @@ function queueTime(customers, n) {
 
   let time = new Array(n).fill(0);
   customers.forEach((customer) => {
-    let nextCashier = time.indexOf(Math.min(...time));
-    time[nextCashier] += customer;
+    let minTime = time.indexOf(Math.min(...time));
+    time[minTime] += customer;
   });
 
   return Math.max(...time);
