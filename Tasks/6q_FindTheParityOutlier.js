@@ -9,7 +9,7 @@
 function findOutlier(integers) {
   let honest = [];
   let odd = [];
-  integers.forEach((item, index) => {
+  integers.forEach((item) => {
     if (item % 2 !== 0) {
       odd.push(item);
     } else {
