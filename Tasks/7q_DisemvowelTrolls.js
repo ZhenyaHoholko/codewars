@@ -6,14 +6,7 @@
 // Note: for this kata y isn't considered a vowel.
 
 function disemvowel(str) {
-  let vowels = "aeiou";
-  let newStr = [];
-  str.split("").map(function (item, index, Array) {
-    item.toLowerCase() !== vowels.split("").find((i) => i == item.toLowerCase())
-      ? newStr.push(item)
-      : "";
-  });
-  return newStr.join("");
+  return str.replace(/[aeiouAEUIOU]/g, "");
 }
 
 console.log(disemvowel("This website is for losers LOL!"));
