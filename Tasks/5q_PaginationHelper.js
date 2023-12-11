@@ -33,4 +33,4 @@ class PaginationHelper {
 }
 
 let abc = new PaginationHelper(["a", "b", "c", "d", "e", "f"], 4);
-console.log(abc);
+console.log(abc.pageIndex(-10));
